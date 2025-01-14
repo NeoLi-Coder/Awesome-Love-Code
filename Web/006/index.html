@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>小孙同学</title>
+    <title>王洁我喜欢你，晚安！！！</title>
     <meta name="language" content="zh-CN">
-    <meta name="title" content="小孙同学">
-    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
-    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
-    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <meta name="title" content="小蓝">
     <link rel="stylesheet" href="css/love.css">
 </head>
 
 <body>
 
-    <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
-        <source src="MP3/1.mp3" />
-    </audio>
+<!--    <audio  autoplay loop id="audios" preload="auto" playsinline muted >-->
+<!--        <source src="MP3/1.mp3">-->
+<!--    </audio>-->
+
+    <audio id="bgmusic" src="MP3/1.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+    <script type="text/javascript">
+        function toggleSound() {
+            var music = document.getElementById("bgmusic");//获取ID
+            console.log(music);
+            console.log(music.paused);
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            }
+
+        }
+        setInterval("toggleSound()",1);
+    </script>
 
     <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
 
@@ -41,6 +53,10 @@
     </div>
 
     <script type="text/javascript" src="js/love.js"></script>
+    
+    <script>
+
+    </script>
 
 </body>
 
